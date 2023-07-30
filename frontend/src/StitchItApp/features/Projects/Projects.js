@@ -8,5 +8,9 @@ export const Projects = () => {
     });
   });
 
-  return <p>Projects will go here.</p>;
+  return (
+    <>
+      <p>Projects will go here.</p>
+    </>
+  );
 };

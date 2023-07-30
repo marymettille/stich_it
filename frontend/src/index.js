@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import { StitchItApp } from "./App/StitchItApp";
+import { StitchItApp } from "./StitchItApp/App/StitchItApp";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
