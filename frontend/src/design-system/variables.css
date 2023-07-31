@@ -4,6 +4,11 @@
   --medium-padding: 8px;
   --large-padding: 12px;
 
+  /* Padding */
+  --small-margin: 4px;
+  --medium-margin: 8px;
+  --large-margin: 12px;
+
   /* Gap */
   --small-gap: 8px;
   --medium-gap: 16px;
