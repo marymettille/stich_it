@@ -1,5 +1,4 @@
 import { Button } from "./Button";
-import "./button.css";
 //👇 This default export determines where your story goes in the story list
 export default {
   title: "Button",
