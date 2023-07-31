@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   namespace :api, constraints: { format: 'json' } do
     namespace :v1 do
       resources :patterns, only: %i[create index update destroy]
+      match 'pattern/:id' => 'patterns#view', :via => %i[get]
     end
   end
 end

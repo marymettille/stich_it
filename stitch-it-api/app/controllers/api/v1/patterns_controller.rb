@@ -14,6 +14,10 @@ module Api
         Pattern.destroy(params[:id])
       end
 
+      def view
+        render json: Pattern.find(params[:id])
+      end
+
       private
 
       def pattern_params
