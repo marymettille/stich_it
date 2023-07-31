@@ -1,16 +1,20 @@
-import axios from "axios";
-import { useEffect } from "react";
+import { useGetAllPatternsQuery } from "../../services/StitchItApp/v1";
+import { PatternCard } from "./PatternCard";
+import { Loading } from "../../../design-system";
+
+import "./Patterns.scss";
 
 export const Patterns = () => {
-  useEffect(() => {
-    axios.get("/api/v1/patterns").then(({ data }) => {
-      console.log(data);
-    });
-  });
+  const { data: patterns, isLoading } = useGetAllPatternsQuery();
 
+  if (isLoading) {
+    return <Loading />;
+  }
   return (
-    <>
-      <p>Projects will go here.</p>
-    </>
+    <div className="patterns-container">
+      {patterns.map((pattern) => (
+        <PatternCard key={pattern.id} pattern={pattern} />
+      ))}
+    </div>
   );
 };
