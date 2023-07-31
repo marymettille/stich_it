@@ -1,0 +1,10 @@
+.pattern-card {
+  border: 2px solid black;
+  padding: var(--medium-padding);
+  background-color: var(--base-background-grey);
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--hover-background-grey);
+  }
+}
