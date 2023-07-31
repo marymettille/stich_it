@@ -3,4 +3,9 @@
   --small-padding: 4px;
   --medium-padding: 8px;
   --large-padding: 12px;
+
+  /* Gap */
+  --small-gap: 8px;
+  --medium-gap: 16px;
+  --large-gap: 32px;
 }
