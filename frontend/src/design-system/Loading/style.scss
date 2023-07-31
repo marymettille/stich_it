@@ -1,0 +1,17 @@
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(15deg); /* Rotate to 10 degrees */
+  }
+  100% {
+    transform: rotate(0deg); /* Rotate back to 0 degrees */
+  }
+}
+
+/* Apply the animation to the SVG */
+.svg-container {
+  display: inline-block;
+  animation: rotateAnimation 2s ease infinite; /* Apply the animation to the SVG container and don't stop animating*/
+}
