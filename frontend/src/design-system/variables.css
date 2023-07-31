@@ -8,4 +8,11 @@
   --small-gap: 8px;
   --medium-gap: 16px;
   --large-gap: 32px;
+
+  /* Color */
+  --grey3: #f0f0f0;
+  --grey4: #dedede;
+
+  --base-background-grey: var(--grey3);
+  --hover-background-grey: var(--grey4);
 }
