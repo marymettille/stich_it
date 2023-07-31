@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 
 import { store } from "./store";
 import { Patterns } from "../features/Patterns/Patterns";
+import { PatternDetail } from "../features/Patterns/PatternDetail";
 
 export const StitchItRouter = () => {
   return (
@@ -10,6 +11,7 @@ export const StitchItRouter = () => {
       <Router>
         <Routes>
           <Route path="/" element={<Patterns />} />
+          <Route path="/pattern/:id" element={<PatternDetail />} />
         </Routes>
       </Router>
     </Provider>

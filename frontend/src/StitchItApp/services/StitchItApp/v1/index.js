@@ -7,9 +7,12 @@ export const stitchItV1Api = createApi({
     getAllPatterns: builder.query({
       query: () => `patterns`,
     }),
+    getPattern: builder.query({
+      query: ({ id }) => `pattern/${id}`,
+    }),
   }),
 });
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetAllPatternsQuery } = stitchItV1Api;
+export const { useGetAllPatternsQuery, useGetPatternQuery } = stitchItV1Api;
