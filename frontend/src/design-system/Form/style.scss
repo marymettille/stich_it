@@ -1,0 +1,22 @@
+.form-container {
+  &.horizontal {
+    display: flex;
+
+    .base-input {
+      margin-right: var(--medium-margin);
+    }
+  }
+
+  &.vertical {
+    display: flex;
+    flex-direction: column;
+
+    .base-input {
+      margin-bottom: var(--medium-margin);
+    }
+
+    button {
+      align-self: flex-end;
+    }
+  }
+}
