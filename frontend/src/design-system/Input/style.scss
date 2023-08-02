@@ -1,7 +1,15 @@
 @import "../variables.css";
 
 .base-input {
+  display: flex;
+  flex-direction: column;
+
+  // I expect this to change
+  input {
+    width: 200px;
+  }
+
   label {
-    margin-right: var(--medium-margin);
+    margin-bottom: var(--medium-margin);
   }
 }
