@@ -2,9 +2,9 @@ import { useGetAllPatternsQuery } from "../../services/StitchItApp/v1";
 import { PatternCard } from "./PatternCard";
 import { Loading } from "../../../design-system";
 
-import "./Patterns.scss";
+import "./PatternGrid.scss";
 
-export const Patterns = () => {
+export const PatternGrid = () => {
   const { data: patterns, isLoading } = useGetAllPatternsQuery();
 
   if (isLoading) {
