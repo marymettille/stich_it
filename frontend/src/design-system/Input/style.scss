@@ -4,11 +4,6 @@
   display: flex;
   flex-direction: column;
 
-  // I expect this to change
-  input {
-    width: 200px;
-  }
-
   label {
     margin-bottom: var(--medium-margin);
   }
