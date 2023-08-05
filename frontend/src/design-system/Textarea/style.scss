@@ -1,0 +1,14 @@
+@import "../variables.css";
+
+.textarea-container {
+  display: flex;
+  flex-direction: column;
+
+  textarea {
+    resize: none;
+  }
+
+  label {
+    margin-bottom: var(--medium-margin);
+  }
+}
