@@ -1,10 +1,19 @@
 .stitch-it-app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+
   height: var(--header-height);
   padding: var(--medium-padding);
   background-color: var(--grey3);
   position: fixed;
   width: 100%;
   top: 0;
-  display: flex;
-  align-items: center;
+
+  .navigation-controls {
+    display: flex;
+    gap: var(--small-gap);
+    align-items: center;
+  }
 }
