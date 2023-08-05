@@ -38,7 +38,7 @@ export const Button = ({ text, className, isLoading, onClick }) => {
       onKeyDown={handleKeyDown}
       aria-label={text}
     >
-      {text}
+      {text && text}
     </button>
   );
 };
