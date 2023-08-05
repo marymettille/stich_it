@@ -13,7 +13,6 @@ export const PatternGrid = () => {
   }
   return (
     <>
-      <CreatePatternForm />
       <div className="pattern-grid">
         {patterns.map((pattern) => (
           <PatternCard key={pattern.id} pattern={pattern} />

@@ -5,7 +5,7 @@ import { store } from "./store";
 import { PatternGrid } from "../features/Patterns/PatternGrid";
 import { PatternDetail } from "../features/Patterns/PatternDetail";
 import { StitchItAppHeader } from "./StitchItAppHeader";
-
+import { CreatePatternForm } from "../features/Patterns/CreatePatternForm";
 import "./style.scss";
 
 export const StitchItRouter = () => {
@@ -17,6 +17,7 @@ export const StitchItRouter = () => {
           <Routes>
             <Route path="/" element={<PatternGrid />} />
             <Route path="/pattern/:id" element={<PatternDetail />} />
+            <Route path="/pattern/create" element={<CreatePatternForm />} />
           </Routes>
         </div>
       </Router>
