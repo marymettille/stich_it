@@ -9,6 +9,6 @@ export default {
 
 export const Primary = {
   args: {
-    children: "I am cute",
+    text: "I am cute",
   },
 };

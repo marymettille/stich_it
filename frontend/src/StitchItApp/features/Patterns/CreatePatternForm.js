@@ -35,7 +35,7 @@ export const CreatePatternForm = () => {
             setPattern({ ...pattern, description: e.target.value })
           }
         />
-        <Button onClick={handleClick}>Submit</Button>
+        <Button onClick={handleClick} text="Submit" />
       </Form>
     </div>
   );

@@ -57,7 +57,7 @@ export const VerticalForm = () => {
           placeholderText="Tell us about the pattern!"
           labelText="Description:"
         />
-        <Button onClick={action("Clicked!")}>Submit</Button>
+        <Button onClick={action("Clicked!")} text="Submit" />
       </Form>
     </>
   );
@@ -69,7 +69,7 @@ export const HorizontalForm = () => {
       <Form.Label>Submit a New Pattern!</Form.Label>
       <Form horizontal>
         <Input name="pattern" placeholderText="Name" />
-        <Button onClick={action("Clicked!")}>Submit</Button>
+        <Button onClick={action("Clicked!")} text="Submit" />
       </Form>
     </>
   );
@@ -98,7 +98,7 @@ export const VerticalFormWithLabelAndDescription = () => {
           placeholderText="Tell us about the pattern!"
           labelText="Description:"
         />
-        <Button onClick={action("Clicked!")}>Submit</Button>
+        <Button onClick={action("Clicked!")} text="Submit" />
       </Form>
     </>
   );

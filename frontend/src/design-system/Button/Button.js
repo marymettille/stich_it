@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import "./style.scss";
 
-export const Button = ({ children, className, onClick }) => {
+export const Button = ({ text, className, onClick }) => {
   const classes = classNames("base-button", className);
   const handleClick = (e) => {
     e.preventDefault();
@@ -19,9 +19,9 @@ export const Button = ({ children, className, onClick }) => {
       className={classes}
       onClick={handleClick}
       onKeyDown={handleKeyDown}
-      aria-label={children}
+      aria-label={text}
     >
-      {children}
+      {text}
     </button>
   );
 };
