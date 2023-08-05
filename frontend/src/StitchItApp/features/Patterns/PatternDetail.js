@@ -13,6 +13,7 @@ export const PatternDetail = () => {
   return (
     <div className="pattern-detail-view">
       <h3>{pattern.name}</h3>
+      <p>Craft: {pattern.craft_name}</p>
       <p>{pattern.author}</p>
       <p>{pattern.description}</p>
     </div>
