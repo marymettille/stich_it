@@ -1,8 +1,11 @@
 import PropTypes from "prop-types";
 import classNames from "classnames";
+
+import { Loading } from "../Loading";
+
 import "./style.scss";
 
-export const Button = ({ text, className, onClick }) => {
+export const Button = ({ text, className, isLoading, onClick }) => {
   const classes = classNames("base-button", className);
   const handleClick = (e) => {
     e.preventDefault();
@@ -14,6 +17,19 @@ export const Button = ({ text, className, onClick }) => {
       onClick();
     }
   };
+
+  if (isLoading) {
+    return (
+      <button
+        className={classes}
+        onClick={handleClick}
+        onKeyDown={handleKeyDown}
+        aria-label="Loading"
+      >
+        {isLoading && <Loading />}
+      </button>
+    );
+  }
 
   return (
     <button
@@ -30,5 +46,6 @@ export const Button = ({ text, className, onClick }) => {
 Button.propTypes = {
   text: PropTypes.string,
   className: PropTypes.string,
+  isLoading: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
 };

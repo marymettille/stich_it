@@ -14,3 +14,15 @@ export const DefaultButton = () => {
     </>
   );
 };
+
+export const LoadingButton = () => {
+  return (
+    <>
+      <Button
+        text="I'm such a cute button!"
+        onClick={action("Clicked!")}
+        isLoading
+      />
+    </>
+  );
+};
