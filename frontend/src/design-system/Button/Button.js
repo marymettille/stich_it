@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import classNames from "classnames";
 import "./style.scss";
 
@@ -24,4 +25,10 @@ export const Button = ({ text, className, onClick }) => {
       {text}
     </button>
   );
+};
+
+Button.propTypes = {
+  text: PropTypes.string,
+  className: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
 };
