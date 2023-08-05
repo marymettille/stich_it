@@ -4,7 +4,6 @@ import { StitchItRouter } from "./StitchItRouter";
 export const StitchItApp = () => {
   return (
     <>
-      <h1>Time to Get Stitching!</h1>
       <div>
         <StitchItRouter />
       </div>

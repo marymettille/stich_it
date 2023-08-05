@@ -4,12 +4,13 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import { PatternGrid } from "../features/Patterns/PatternGrid";
 import { PatternDetail } from "../features/Patterns/PatternDetail";
-
+import { StitchItAppHeader } from "./StitchItAppHeader";
 import "./style.scss";
 
 export const StitchItRouter = () => {
   return (
     <Provider store={store}>
+      <StitchItAppHeader />
       <div className="container">
         <Router>
           <Routes>
