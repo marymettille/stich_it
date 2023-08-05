@@ -6,8 +6,8 @@ module Api
       end
 
       def create
-        dog = Pattern.create(pattern_params)
-        render json: dog
+        pattern = Pattern.create(pattern_params)
+        render json: pattern
       end
 
       def destroy
