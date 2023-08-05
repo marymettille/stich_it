@@ -1,3 +1,10 @@
 .base-button {
-  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: var(--base-button-height);
+  min-width: var(--base-button-height);
+  // I expect this to change
+  padding: 0;
 }
