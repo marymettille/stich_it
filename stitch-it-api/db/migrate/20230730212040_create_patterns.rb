@@ -4,6 +4,7 @@ class CreatePatterns < ActiveRecord::Migration[7.0]
       t.string :name, not_null: true
       t.string :author
       t.text :description
+      t.integer :craft_id
       t.timestamps
     end
   end

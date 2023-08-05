@@ -21,7 +21,7 @@ module Api
       private
 
       def pattern_params
-        params.require(:pattern).permit(:name, :author, :description)
+        params.require(:pattern).permit(:name, :author, :description, :craft_id)
       end
     end
   end
