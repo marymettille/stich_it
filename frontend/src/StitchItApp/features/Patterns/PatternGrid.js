@@ -11,10 +11,12 @@ export const PatternGrid = () => {
     return <Loading />;
   }
   return (
-    <div className="patterns-container">
-      {patterns.map((pattern) => (
-        <PatternCard key={pattern.id} pattern={pattern} />
-      ))}
-    </div>
+    <>
+      <div className="pattern-grid">
+        {patterns.map((pattern) => (
+          <PatternCard key={pattern.id} pattern={pattern} />
+        ))}
+      </div>
+    </>
   );
 };

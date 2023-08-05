@@ -1,5 +1,6 @@
-.patterns-container {
+.pattern-grid {
   display: flex;
   flex-direction: row;
   gap: var(--medium-gap);
+  margin: 0 var(--large-margin);
 }
