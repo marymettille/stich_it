@@ -6,7 +6,15 @@ import { Icon } from "./Icon";
 
 import "./style.scss";
 
-export const Button = ({ text, className, icon, isLoading, onClick }) => {
+export const Button = ({
+  text,
+  className,
+  icon,
+  isLoading,
+  onClick,
+  // This is how I'll be doing aria labels for right now.
+  ...props
+}) => {
   const classes = classNames("base-button", className);
   const handleClick = (e) => {
     e.preventDefault();
@@ -33,7 +41,12 @@ export const Button = ({ text, className, icon, isLoading, onClick }) => {
   }
 
   return (
-    <button className={classes} onClick={handleClick} onKeyDown={handleKeyDown}>
+    <button
+      className={classes}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+      {...props}
+    >
       {icon && <Icon icon={icon} />}
       {text && text}
     </button>

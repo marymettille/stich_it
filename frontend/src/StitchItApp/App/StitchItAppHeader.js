@@ -9,8 +9,16 @@ export const StitchItAppHeader = () => {
     <header className="stitch-it-app-header">
       <h2>Time to Get Stitching!</h2>
       <div className="navigation-controls">
-        <Button icon="home" onClick={() => navigate(`/`)} />
-        <Button icon="new" onClick={() => navigate(`/pattern/create`)} />
+        <Button
+          icon="home"
+          onClick={() => navigate(`/`)}
+          aria-label="Navigate to home page"
+        />
+        <Button
+          icon="new"
+          onClick={() => navigate(`/pattern/create`)}
+          aria-label="Navigate to Create a New Pattern Page"
+        />
       </div>
     </header>
   );
