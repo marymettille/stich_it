@@ -1,6 +1,6 @@
 import "./style.scss";
 
-export const Input = ({ labelText, placeholderText, name }) => {
+export const Input = ({ labelText, placeholderText, name, onChange }) => {
   return (
     <div className="base-input">
       {labelText && <label htmlFor={name}>{labelText}</label>}
@@ -8,6 +8,7 @@ export const Input = ({ labelText, placeholderText, name }) => {
         id={name}
         aria-label={placeholderText}
         placeholder={placeholderText}
+        onChange={onChange}
       />
     </div>
   );
