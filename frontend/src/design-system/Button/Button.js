@@ -2,10 +2,11 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 
 import { Loading } from "../Loading";
+import { Icon } from "./Icon";
 
 import "./style.scss";
 
-export const Button = ({ text, className, isLoading, onClick }) => {
+export const Button = ({ text, className, icon, isLoading, onClick }) => {
   const classes = classNames("base-button", className);
   const handleClick = (e) => {
     e.preventDefault();
@@ -32,17 +33,16 @@ export const Button = ({ text, className, isLoading, onClick }) => {
   }
 
   return (
-    <button
-      className={classes}
-      onClick={handleClick}
-      onKeyDown={handleKeyDown}
-      aria-label={text}
-    >
+    <button className={classes} onClick={handleClick} onKeyDown={handleKeyDown}>
+      {icon && <Icon icon={icon} />}
       {text && text}
     </button>
   );
 };
 
+Button.defaultProps = {
+  text: null,
+};
 Button.propTypes = {
   text: PropTypes.string,
   className: PropTypes.string,

@@ -26,3 +26,7 @@ export const LoadingButton = () => {
     </>
   );
 };
+
+export const IconButton = () => {
+  return <Button icon="delete" onClick={action("Clicked!")} />;
+};
