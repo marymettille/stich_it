@@ -1,6 +1,5 @@
 import { Form } from "./Form";
-import { Input } from "../";
-import { Button } from "../";
+import { Input, Button, Textarea } from "../";
 import { action } from "@storybook/addon-actions";
 
 //👇 This default export determines where your story goes in the story list
@@ -53,6 +52,11 @@ export const VerticalForm = () => {
           placeholderText="Author"
           labelText="Author Name:"
         />
+        <Textarea
+          name="description"
+          placeholderText="Tell us about the pattern!"
+          labelText="Description:"
+        />
         <Button onClick={action("Clicked!")}>Submit</Button>
       </Form>
     </>
@@ -88,6 +92,11 @@ export const VerticalFormWithLabelAndDescription = () => {
           name="author"
           placeholderText="Author"
           labelText="Author Name:"
+        />
+        <Textarea
+          name="description"
+          placeholderText="Tell us about the pattern!"
+          labelText="Description:"
         />
         <Button onClick={action("Clicked!")}>Submit</Button>
       </Form>
