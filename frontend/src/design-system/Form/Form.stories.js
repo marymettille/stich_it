@@ -1,5 +1,7 @@
+import { useState } from "react";
+
 import { Form } from "./Form";
-import { Input, Button, Textarea } from "../";
+import { Input, Button, Textarea, RadioGroup } from "../";
 import { action } from "@storybook/addon-actions";
 
 //👇 This default export determines where your story goes in the story list
@@ -38,6 +40,12 @@ export const FormWithLabel = () => {
 };
 
 export const VerticalForm = () => {
+  const [craft, setCraft] = useState("1");
+
+  const handleChange = (e) => {
+    action("onChange")(`toggled!`);
+    setCraft(e.target.value);
+  };
   return (
     <>
       <Form.Label>Submit a New Pattern!</Form.Label>
@@ -57,6 +65,23 @@ export const VerticalForm = () => {
           placeholderText="Tell us about the pattern!"
           labelText="Description:"
         />
+        <RadioGroup>
+          <RadioGroup.Label>What Kind of Craft is This?</RadioGroup.Label>
+          <RadioGroup.Radio
+            labelText="English Paper Piecing"
+            onChange={handleChange}
+            checked={craft === "1"}
+            name="English Paper Piecing"
+            value={1}
+          />
+          <RadioGroup.Radio
+            labelText="Machine Quilting"
+            onChange={handleChange}
+            checked={craft === "2"}
+            name="Machine Quilting"
+            value={2}
+          />
+        </RadioGroup>
         <Button onClick={action("Clicked!")} text="Submit" />
       </Form>
     </>
@@ -76,6 +101,13 @@ export const HorizontalForm = () => {
 };
 
 export const VerticalFormWithLabelAndDescription = () => {
+  const [craft, setCraft] = useState("1");
+
+  const handleChange = (e) => {
+    action("onChange")(`toggled!`);
+    setCraft(e.target.value);
+  };
+
   return (
     <>
       <Form.Label>Submit a New Pattern!</Form.Label>
@@ -98,6 +130,23 @@ export const VerticalFormWithLabelAndDescription = () => {
           placeholderText="Tell us about the pattern!"
           labelText="Description:"
         />
+        <RadioGroup>
+          <RadioGroup.Label>What Kind of Craft is This?</RadioGroup.Label>
+          <RadioGroup.Radio
+            labelText="English Paper Piecing"
+            onChange={handleChange}
+            checked={craft === "1"}
+            name="English Paper Piecing"
+            value={1}
+          />
+          <RadioGroup.Radio
+            labelText="Machine Quilting"
+            onChange={handleChange}
+            checked={craft === "2"}
+            name="Machine Quilting"
+            value={2}
+          />
+        </RadioGroup>
         <Button onClick={action("Clicked!")} text="Submit" />
       </Form>
     </>

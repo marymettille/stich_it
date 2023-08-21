@@ -1,0 +1,16 @@
+.radio-group {
+  p.radio-group-label {
+    margin: 0;
+    margin-bottom: var(--medium-margin);
+  }
+  .radio-input {
+    display: flex;
+    align-items: center;
+    margin: var(--small-margin) 0;
+
+    input {
+      margin: 0;
+      margin-right: var(--medium-margin);
+    }
+  }
+}
