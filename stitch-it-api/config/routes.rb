@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :patterns, only: %i[create index update destroy]
       match 'pattern/:id' => 'patterns#view', :via => %i[get]
+
+      resources :crafts, only: %i[create index]
     end
   end
 end
