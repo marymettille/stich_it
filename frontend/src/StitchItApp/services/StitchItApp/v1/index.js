@@ -17,6 +17,16 @@ export const stitchItV1Api = createApi({
     getPattern: builder.query({
       query: ({ id }) => `pattern/${id}`,
     }),
+    getAllCrafts: builder.query({
+      query: () => `crafts`,
+      providesTags: (result) =>
+        result
+          ? [
+              ...result.map(({ id }) => ({ type: "Crafts", id })),
+              { type: "Crafts", id: "LIST" },
+            ]
+          : [{ type: "Crafts", id: "LIST" }],
+    }),
     createPattern: builder.mutation({
       query: (data) => ({
         url: "/patterns",
@@ -33,5 +43,6 @@ export const stitchItV1Api = createApi({
 export const {
   useGetAllPatternsQuery,
   useGetPatternQuery,
+  useGetAllCraftsQuery,
   useCreatePatternMutation,
 } = stitchItV1Api;
