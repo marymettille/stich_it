@@ -7,7 +7,7 @@ module Api
 
       def create
         pattern = Pattern.create(pattern_params)
-        render json: pattern
+        render json: pattern, status: :created
       end
 
       def destroy

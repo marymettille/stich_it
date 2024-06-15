@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import {
   Button,
@@ -15,7 +16,7 @@ import {
 export const CreatePatternForm = () => {
   const [pattern, setPattern] = useState();
   const [selectedCraft, setSelectedCraft] = useState(1);
-  const [createPattern] = useCreatePatternMutation();
+  const [createPattern, { isLoading, error }] = useCreatePatternMutation();
   const { data: crafts } = useGetAllCraftsQuery();
 
   const handleClick = () => {
@@ -48,7 +49,7 @@ export const CreatePatternForm = () => {
         />
         <RadioGroup>
           <RadioGroup.Label>What Kind of Craft is This?</RadioGroup.Label>
-          {crafts.map((craft) => (
+          {crafts?.map((craft) => (
             <RadioGroup.Radio
               key={craft.id}
               labelText={craft.name}
@@ -62,7 +63,9 @@ export const CreatePatternForm = () => {
             />
           ))}
         </RadioGroup>
-        <Button onClick={handleClick} text="Submit" />
+        <Button onClick={handleClick} text="Submit" isLoading={isLoading} />
+
+        {error && <p>Uh oh! There was a problem submitting your form.</p>}
       </Form>
     </div>
   );
